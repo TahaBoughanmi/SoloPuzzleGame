@@ -1,52 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Puzzles By Taha</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
- 
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/8a2bd81df1.js" crossorigin="anonymous"></script>
+    <title>PeterPan By Taha</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  </head>
+  <body>
     <div class="topnav">
-        <a class="active" href="index.html"><b>Home</b></a>
-        <a href="about.html"><b>About</b></a>
-      </div>
-      <div class="centered" id="peter">
-        <img src="./PerterPan/PeterPan.jpg" alt="peterPan">
-        <button id="start">start</button>
-      </div>
-      <div id="gameMode">
-<ul id="sortable">
-  <li id="y1"></li>
-  <li id="y2"></li>
-  <li id="y3"></li>
-  <li id="y4"></li>
-  <li id="y5"></li>
-  <li id="y6"></li>
-  <li id="y7"></li>
-  <li id="y8"></li>
-  <li id="y9"></li>
-  <li id="y10"></li>
-  <li id="y11"></li>
-  <li id="y12"></li>
-  <li id="y13"></li>
-  <li id="y14"></li>
-  <li id="y15"></li>
-  <li id="y16"></li>
-  <li id="y17"></li>
-  <li id="y18"></li>
-  <li id="y19"></li>
-  <li id="y20"></li>
-  <li id="y21"></li>
-  <li id="y22"></li>
-  <li id="y23"></li>
-  <li id="y24"></li>
-</ul>
- </div>
- 
-</body>
-<script src="main.js"></script>
+      <a href="index.html"><b>Home</b></a>
+      <a href="about.html"><b>How to play?</b></a>
+      <button class="sound" ><i class="fa-solid fa-volume-high fa-lg"></i></button>
+    </div>
+    <div class="centered" id="peter">
+      <img src="./PerterPan/PeterPan.jpg" alt="peterPan" />
+      <button class="start">start</button>
+    </div>
+    <div  class="centered">
+      <img id="gif" src="PerterPan/PPan.gif" alt="PeterPanGif" />
+    </div>
+   
+    <div id="gameMode">
+      <div id="watch" class="centered"></div>
+      <ul id="sortable" >
+        <li id="y1"></li>
+        <li id="y2"></li>
+        <li id="y3"></li>
+        <li id="y4"></li>
+        <li id="y5"></li>
+        <li id="y6"></li>
+        <li id="y7"></li>
+        <li id="y8"></li>
+        <li id="y9"></li>
+        <li id="y10"></li>
+        <li id="y11"></li>
+        <li id="y12"></li>
+        <li id="y13"></li>
+        <li id="y14"></li>
+        <li id="y15"></li>
+        <li id="y16"></li>
+        <li id="y17"></li>
+        <li id="y18"></li>
+        <li id="y19"></li>
+        <li id="y20"></li>
+        <li id="y21"></li>
+        <li id="y22"></li>
+        <li id="y23"></li>
+        <li id="y24"></li>
+      </ul>
+    
+    </div>
+    <audio class="peterPan">
+      <source src="./Audios/PeterPan.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="done">
+      <source src="./Audios/PuzzleDone.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="po9">
+      <source src="./Audios/Po9.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="end">
+      <source src="./Audios/PeterEnd.mp3" type="audio/mpeg" />
+    </audio>
+  </body>
+  <script src="main.js"></script>
 </html>

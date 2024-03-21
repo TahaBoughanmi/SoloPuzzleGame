@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/8a2bd81df1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
@@ -14,8 +15,20 @@
   <body>
     <div class="topnav">
       <a href="index.html"><b>Home</b></a>
-      <a href="about.html"><b>About</b></a>
+      <a href="about.html"><b>How to play?</b></a>
+      <button class="sound" ><i class="fa-solid fa-volume-high fa-lg"></i></button>
     </div>
+    <table id='scores' class="centered">
+      <tr>
+        <th><b>NAME</b></th>
+        <th><b>SCORE</b></th>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <audio></audio>
   </body>
   <script src="main.js"></script>
 </html>

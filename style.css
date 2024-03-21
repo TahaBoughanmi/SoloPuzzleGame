@@ -11,40 +11,55 @@ td {
 }
 #sortable {
   display: inline-block;
-  text-align: left;
+  text-align: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  height: 650px;
-  width: 1000px;
-  margin-top: 1em;
+  height: 700px;
+  width: 1100px;
+  margin-top: 42px;
+  margin-right: 95px;
 }
 #sortable li {
-  margin:  0;
-  padding: 1px;
+  margin: 0;
+  padding: 0.5px;
   float: right;
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   text-align: center;
 }
 body {
-  background-color:#FFCC00
+  background-color: #ffcc00;
 }
 li span {
-  position: absolute;
+  position: sticky;
   margin-left: -1.3em;
 }
 .lionPuzzle {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
 }
 
 .topnav {
+  top: 3px;
+  position: fixed;
   background-color: #003399;
   overflow: hidden;
   justify-content: center;
   width: 100%;
   z-index: 1;
+}
+.topnav button {
+  font-size: 25px;
+  width: 10%;
+  padding: 10px 30px;
+  background-color: #003399;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+.topnav button:hover {
+  color: #ffcc00;
 }
 .topnav a {
   float: left;
@@ -53,11 +68,12 @@ li span {
   padding: 10px 30px;
   text-decoration: none;
   font-size: 25px;
-  width: 45%;
+  width: 40%;
+  cursor: pointer;
 }
 .topnav a:hover {
   background-color: none;
-  color: #FFCC00;
+  color: #ffcc00;
 }
 
 body {
@@ -66,13 +82,13 @@ body {
 }
 
 .split {
-  height: 100%;
+  height: 95%;
   width: 50%;
-  position:fixed;
+  position: absolute;
   z-index: -1;
   top: 0;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 0px;
   margin-top: 1em;
 }
 
@@ -92,6 +108,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  margin-top: 30px;
+  float: right;
 }
 
 .centered img {
@@ -99,16 +117,17 @@ body {
   border-radius: 10%;
   height: 600px;
 }
-.centered a , .centered button{
+.centered a,
+.centered button {
   text-decoration: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: #FFCC00;
+  background-color: #ffcc00;
   color: white;
-  font-size: 16px;
+  font-size: 25px;
   padding: 12px 24px;
   border: none;
   cursor: pointer;
@@ -118,12 +137,40 @@ body {
 .centered a:hover {
   color: #003399;
 }
-#gameMode{
+#gameMode {
   text-align: center;
+  margin-top: 50px;
 }
-#lion img ,#peter img{
+#lion img,
+#peter img {
   margin-top: 3em;
   border-radius: 0;
   height: 650px;
   width: 1000px;
+}
+.centered #gif {
+  margin-top: 20px;
+  width: 1000px;
+  height: auto;
+  border-radius: 0;
+}
+#watch {
+  margin-top: 30px;
+  font-size: 150px;
+  color: #ffcc00;
+  background-color: #003399;
+  left: 10%;
+}
+table {
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid #ffffff;
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+}
+.giphy {
+  font-size: x-large;
+  color: #ffcc00;
+  background-color: #003399;
 }
