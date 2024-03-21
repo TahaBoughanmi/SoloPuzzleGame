@@ -1,4 +1,17 @@
 $(function () {
+  $('#signup').click(function(){
+    $('#id01').css({'display':'block'})
+  })
+  $('.cancelbtn').click(function(){
+    $('#id01').css({'display':'none'})
+  })
+  $('.login').click(function(){
+    
+    $("#myForm").css({'display' : 'block'})
+  })
+  $('.cancel').click(function(){
+    $('#myForm').css({'display':'none'})
+  })
   let audio;
   let checker;
   let playAudio = function () {
@@ -8,7 +21,6 @@ $(function () {
     24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5,
     4, 3, 2, 1,
   ];
-  
   let arrOfIds = [];
   let Arr = [].concat(originalArr);
   function shuffle(arr) {
@@ -38,54 +50,57 @@ $(function () {
       }
     }
     if (result) {
-      $('.giphy').append(`<p class='giphy'>You made it in ${$('#watch').html()} secondes</P>`)
-     console.log()
-      audio = document.querySelector(".done")
-      $('#gameMode').fadeOut(3000);
-      playAudio()
-      setTimeout(function(){
-      audio = document.querySelector(".end")
-        $('#gif').show()
-        playAudio()
-      },4000)
+      console.log();
+      audio = document.querySelector(".done");
+      $("#gameMode").fadeOut(3000);
+      playAudio();
+      setTimeout(function () {
+        audio = document.querySelector(".end");
+        $(".giphy").append(
+          `<p class='giphy'>You made it in ${$("#watch").html()} secondes</P>`
+        );
+        $("#gif").show();
+        playAudio();
+      }, 4000);
     }
   }
-  $('#watch').hide()
-  $('#gif').hide()
-  // shuffle(Arr);
-  $('.sound').click(function(){
-    
-    const audios=document.querySelectorAll('audio')
-    for(var i=0;i<audios.length;i++){
-      if(audios[i].muted===false){
-        audios[i].muted=true
-        $(this).html('<i class="fa-solid fa-volume-xmark fa-lg"></i>')
-      }
-      else{
-        audios[i].muted=false
-        $(this).html('<i class="fa-solid fa-volume-high fa-lg"></i>')
+  $(".PHTP ").slideUp(0);
+  $("#watch").hide();
+  $("#gif").hide();
+  shuffle(Arr);
+  $(".HTP").click(function () {
+    $(".PHTP ").slideToggle();
+  });
+  $(".sound").click(function () {
+    const audios = document.querySelectorAll("audio");
+    for (var i = 0; i < audios.length; i++) {
+      if (audios[i].muted === false) {
+        audios[i].muted = true;
+        $(this).html('<i class="fa-solid fa-volume-xmark fa-lg"></i>');
+      } else {
+        audios[i].muted = false;
+        $(this).html('<i class="fa-solid fa-volume-high fa-lg"></i>');
       }
     }
-  })
+  });
   $(".start").click(function () {
-    let s=0
-    let m=0
-      setInterval(function () {
-          $("#watch").html(m+':'+s);
-          s++;
-          if(s===59){
-           m++
-           s=0
-          }
-          $('#watch').show()
-      }, 1000);
-   let j = 1;
-   checker = $(this).parent().attr("id");
-
+    let s = 0;
+    let m = 0;
+    setInterval(function () {
+      $("#watch").html(m + ":" + s);
+      s++;
+      if (s === 59) {
+        m++;
+        s = 0;
+      }
+      $("#watch").show();
+    }, 1000);
+    let j = 1;
+    checker = $(this).parent().attr("id");
     for (var i = 0; i < Arr.length; i++) {
       if (checker === "lion") {
         audio = document.querySelector(".lionKing");
-        
+
         $(`#y${j}`).append(
           `<img class='lionPuzzle' id=${Arr[i]} src=/LionKing/${Arr[i]}.jpg>`
         );
@@ -95,15 +110,14 @@ $(function () {
           `<img class='lionPuzzle' id=${Arr[i]} src=/PerterPan/${Arr[i]}.jpg>`
         );
       }
-
       j++;
     }
-    playAudio()
+    playAudio();
     $(`#${checker}`).fadeOut(1000);
-    audio = document.querySelector(".po9")
+    audio = document.querySelector(".po9");
     $("#sortable").sortable({
       update: function () {
-        playAudio()
+        playAudio();
         arrOfIds = getImageIds();
         checkPos();
       },

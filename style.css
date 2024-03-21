@@ -1,3 +1,6 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -6,8 +9,19 @@ ul {
   height: 100%;
   overflow: auto;
 }
-td {
+ul button ,form button{
+  background-color: #003399;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
   border: none;
+  cursor: pointer;
+  width: 95%;
+  opacity: 0.9;
+}
+ul button:hover ,form button:hover{
+  opacity: 1;
+  color: #ffcc00;
 }
 #sortable {
   display: inline-block;
@@ -39,7 +53,6 @@ li span {
   width: 160px;
   height: 160px;
 }
-
 .topnav {
   top: 3px;
   position: fixed;
@@ -51,7 +64,7 @@ li span {
 }
 .topnav button {
   font-size: 25px;
-  width: 10%;
+  width: 17%;
   padding: 10px 30px;
   background-color: #003399;
   cursor: pointer;
@@ -68,19 +81,12 @@ li span {
   padding: 10px 30px;
   text-decoration: none;
   font-size: 25px;
-  width: 40%;
+  width: 17%;
   cursor: pointer;
 }
 .topnav a:hover {
-  background-color: none;
   color: #ffcc00;
 }
-
-body {
-  font-family: Arial;
-  color: white;
-}
-
 .split {
   height: 95%;
   width: 50%;
@@ -91,17 +97,14 @@ body {
   padding-top: 0px;
   margin-top: 1em;
 }
-
 .left {
   left: 0;
   background-color: inherit;
 }
-
 .right {
   right: 0;
   background-color: inherit;
 }
-
 .centered {
   position: absolute;
   top: 50%;
@@ -111,7 +114,6 @@ body {
   margin-top: 30px;
   float: right;
 }
-
 .centered img {
   width: 700px;
   border-radius: 10%;
@@ -160,17 +162,120 @@ body {
   color: #ffcc00;
   background-color: #003399;
   left: 10%;
-}
-table {
-  font-family: "Times New Roman", Times, serif;
-  border: 1px solid #ffffff;
-  width: 350px;
-  height: 200px;
-  text-align: center;
-  border-collapse: collapse;
+  border-radius: 10%;
 }
 .giphy {
-  font-size: x-large;
+  font-size: xx-large;
   color: #ffcc00;
   background-color: #003399;
+}
+.about {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  justify-content: center;
+  width: 60%;
+  padding: 20px;
+  margin: 20px;
+  background-color: #003399;
+  background-image: url("/LionKing/simba-timon-and-pumba.png");
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: top;
+  background-size: contain;
+  color: #ffffff;
+}
+h2 {
+  color: #ffcc00;
+  font-size: 40px;
+}
+p {
+  font-size: 20px;
+}
+.about button {
+  background-color: transparent;
+  border: none;
+  display: inherit;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+input[type="text"],
+input[type="password"] {
+  width: 95%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+button:hover {
+  opacity: 1;
+  color: #ffcc00;
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #003399;
+  z-index: 9;
+}
+.form-container {
+  max-width: 100%;
+  padding: 10px;
+  background-color: #ffcc00;
+}
+
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #003399;
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #ffcc00;
+  margin: 5% auto 15% auto;
+  border: 1px solid #003399;
+  width: 70%;
+  text-align: center;
+}
+
+hr {
+  border: 1px solid #003399;
+  margin-bottom: 25px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }

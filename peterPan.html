@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://kit.fontawesome.com/8a2bd81df1.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/8a2bd81df1.js"
+      crossorigin="anonymous"
+    ></script>
     <title>PeterPan By Taha</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -12,20 +15,23 @@
   <body>
     <div class="topnav">
       <a href="index.html"><b>Home</b></a>
-      <a href="about.html"><b>How to play?</b></a>
-      <button class="sound" ><i class="fa-solid fa-volume-high fa-lg"></i></button>
+      <a href="about.html"><b>About</b></a>
+      <button id="signup"><b>Sign Up</b></button>
+      <button class="login"><b>Login</b></button>
+      <button class="sound">
+        <i class="fa-solid fa-volume-high fa-lg"></i>
+      </button>
     </div>
     <div class="centered" id="peter">
       <img src="./PerterPan/PeterPan.jpg" alt="peterPan" />
       <button class="start">start</button>
     </div>
-    <div  class="centered">
+    <div class="centered giphy">
       <img id="gif" src="PerterPan/PPan.gif" alt="PeterPanGif" />
     </div>
-   
     <div id="gameMode">
       <div id="watch" class="centered"></div>
-      <ul id="sortable" >
+      <ul id="sortable">
         <li id="y1"></li>
         <li id="y2"></li>
         <li id="y3"></li>
@@ -51,7 +57,6 @@
         <li id="y23"></li>
         <li id="y24"></li>
       </ul>
-    
     </div>
     <audio class="peterPan">
       <source src="./Audios/PeterPan.mp3" type="audio/mpeg" />
