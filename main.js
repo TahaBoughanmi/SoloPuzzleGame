@@ -1,17 +1,4 @@
 $(function () {
-  $('#signup').click(function(){
-    $('#id01').css({'display':'block'})
-  })
-  $('.cancelbtn').click(function(){
-    $('#id01').css({'display':'none'})
-  })
-  $('.login').click(function(){
-    
-    $("#myForm").css({'display' : 'block'})
-  })
-  $('.cancel').click(function(){
-    $('#myForm').css({'display':'none'})
-  })
   let audio;
   let checker;
   let playAudio = function () {
@@ -23,6 +10,9 @@ $(function () {
   ];
   let arrOfIds = [];
   let Arr = [].concat(originalArr);
+  $(".PHTP ").slideUp(0);
+  $("#watch").hide();
+  $("#gif").hide();
   function shuffle(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
       const x = Math.floor(Math.random() * (i + 1));
@@ -64,10 +54,20 @@ $(function () {
       }, 4000);
     }
   }
-  $(".PHTP ").slideUp(0);
-  $("#watch").hide();
-  $("#gif").hide();
   shuffle(Arr);
+  $('#signup').click(function(){
+    $('#id01').css({'display':'block'})
+  })
+  $('.cancelbtn').click(function(){
+    $('#id01').css({'display':'none'})
+  })
+  $('.login').click(function(){
+    
+    $("#myForm").css({'display' : 'block'})
+  })
+  $('.cancel').click(function(){
+    $('#myForm').css({'display':'none'})
+  })
   $(".HTP").click(function () {
     $(".PHTP ").slideToggle();
   });
@@ -86,6 +86,7 @@ $(function () {
   $(".start").click(function () {
     let s = 0;
     let m = 0;
+    let j = 1;
     setInterval(function () {
       $("#watch").html(m + ":" + s);
       s++;
@@ -95,7 +96,6 @@ $(function () {
       }
       $("#watch").show();
     }, 1000);
-    let j = 1;
     checker = $(this).parent().attr("id");
     for (var i = 0; i < Arr.length; i++) {
       if (checker === "lion") {
